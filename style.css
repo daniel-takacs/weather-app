@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0 10px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+.wrapper {
+  width: 340px;
+  padding: 50px 0;
+  border: 1px solid black;
+  border-radius: 50px 0px 50px;
+  box-shadow: 2px 5px 15px black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(
+    to right,
+    #5b7090,
+    #627e9f,
+    #698cae,
+    #709bbd,
+    #77aacb
+  );
+}
+.location,
+.temperature {
+  height: 30vh;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.temperature {
+  flex-direction: column;
+  margin-bottom: -20px;
+}
+.degree-section {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.degree-section span {
+  font-size: 50px;
+  text-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.degree-section h2 {
+  margin: 10px;
+  font-size: 80px;
+  text-shadow: 2px 10px 10px rgba(0, 0, 0, 0.5);
+}
+input {
+  width: 100%;
+  max-width: 300px;
+  padding: 15px 15px;
+  border: none;
+  outline: none;
+  border-radius: 16px 0px 16px 0px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+input:focus {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+::placeholder {
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+.location h1 {
+  margin-right: 20px;
+  font-size: 35px;
+  width: 100%;
+}
+.temperature-description {
+  font-size: 25px;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 395px) {
+  .wrapper {
+    width: 395px;
+  }
+}
