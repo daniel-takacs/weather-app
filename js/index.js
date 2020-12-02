@@ -1,3 +1,6 @@
+import '../styles/styles.css';
+import '../index.html';
+
 const apiKey = "e9814b1d14446057a91548c564c18fb5";
 
 window.addEventListener("load", () => {
@@ -5,11 +8,11 @@ window.addEventListener("load", () => {
   let lat;
 
   let temperatureDescription = document.querySelector(
-    ".temperature-description"
+    ".js-temperature-description"
   );
-  let temperatureDegree = document.querySelector(".temperature-degree");
-  let locationIcon = document.querySelector(".weather-icon");
-  let locationCity = document.querySelector(".location-city");
+  let temperatureDegree = document.querySelector(".js-temperature-degree");
+  let locationIcon = document.querySelector(".js-weather-icon");
+  let locationCity = document.querySelector(".js-location-city");
   const json = (response) => response.json();
   const results = (data) => {
     const { temp } = data.main;
@@ -23,8 +26,8 @@ window.addEventListener("load", () => {
 // fahrenheit conversion
 
     const fahrenheit = temp * 1.8 + 32;
-    const degree = document.querySelector('.temperature-degree');
-    const degreeSpan = document.querySelector('.degree-section span:nth-child(3)')
+    const degree = document.querySelector('.js-temperature-degree');
+    const degreeSpan = document.querySelector('.js-degree-section span:nth-child(3)')
   
     degree.addEventListener('click', ()=> {
       
@@ -61,7 +64,7 @@ window.addEventListener("load", () => {
 
   //get weather by city searching
   
-  const searchbox = document.querySelector(".search-box");
+  const searchbox = document.querySelector(".js-search-box");
   searchbox.addEventListener("keypress", query);
 
   function query(e) {
