@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Weather app</title>
+  </head>
+  <body>
+    <section class="wrapper">
+      <input
+        type="text"
+        autocomplete="off"
+        class="search-box js-search-box"
+        placeholder="Search for a city..."
+      />
+      <div class="location">
+        <h1 class="location-city js-location-city">Location</h1>
+        <div class="weather-icon js-weather-icon">
+          <img src="icons/unknown.png" alt="weather icon" />
+        </div>
+      </div>
+      <div class="temperature">
+        <div class="degree-section js-degree-section">
+          <h2 class="temperature-degree js-temperature-degree">-</h2>
+          <span>°</span> <span>C</span>
+        </div>
+        <div class="temperature-description js-temperature-description">-</div>
+      </div>
+    </section>
+    <script src="dist/bundle.js"></script>
+  </body>
+</html>
