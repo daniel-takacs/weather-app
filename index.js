@@ -19,10 +19,29 @@ window.addEventListener("load", () => {
     locationCity.innerText = `${data.name} ${data.sys.country}`;
     const { icon } = data.weather[0];
     locationIcon.innerHTML = `<img src="icons/${icon}.png">`;
+
+// fahrenheit conversion
+
+    const fahrenheit = temp * 1.8 + 32;
+    const degree = document.querySelector('.temperature-degree');
+    const degreeSpan = document.querySelector('.degree-section span:nth-child(3)')
+  
+    degree.addEventListener('click', ()=> {
+      
+      if (degreeSpan.textContent === "C") {
+        degreeSpan.textContent = "F";
+        degree.textContent = Math.round(fahrenheit);
+      } else {
+        degreeSpan.textContent = "C";
+        degree.textContent = Math.round(temp);
+      }
+    })
   };
+
   const errorhandle = (error) => {
     console.error("Error: ", Error);
   };
+
   //get weather by geolocation
 
   if (navigator.geolocation) {
@@ -40,8 +59,8 @@ window.addEventListener("load", () => {
     });
   }
 
-  //get forecast by city searching
-
+  //get weather by city searching
+  
   const searchbox = document.querySelector(".search-box");
   searchbox.addEventListener("keypress", query);
 
@@ -60,17 +79,4 @@ window.addEventListener("load", () => {
       .then(results)
       .catch(errorhandle);
   }
-
-  const degree = document.querySelector('.temperature-degree');
-  const degreeSpan = document.querySelector('.degree-section span:nth-child(3)')
-
-  degree.addEventListener('click', ()=> {
-    if (degreeSpan.textContent === "C") {
-      degreeSpan.textContent = "F";
-    } else {
-      degreeSpan.textContent = "C";
-    }
-  })
-
-
 });
