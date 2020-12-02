@@ -60,4 +60,17 @@ window.addEventListener("load", () => {
       .then(results)
       .catch(errorhandle);
   }
+
+  const degree = document.querySelector('.temperature-degree');
+  const degreeSpan = document.querySelector('.degree-section span:nth-child(3)')
+
+  degree.addEventListener('click', ()=> {
+    if (degreeSpan.textContent === "C") {
+      degreeSpan.textContent = "F";
+    } else {
+      degreeSpan.textContent = "C";
+    }
+  })
+
+
 });
