@@ -21,7 +21,7 @@ window.addEventListener("load", () => {
     temperatureDescription.textContent = main;
     locationCity.innerText = `${data.name} ${data.sys.country}`;
     const { icon } = data.weather[0];
-    locationIcon.innerHTML = `<img src="icons/${icon}.png">`;
+    locationIcon.innerHTML = `<img src="./icons/${icon}.png">`;
 
 // fahrenheit conversion
 
