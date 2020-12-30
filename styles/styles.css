@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap");
-.wrapper {
+*{
+  font-size: 15px;
+
+}
+body {
   font-family: "PT Sans Caption", sans-serif;
   color: white;
-  height: 100vh;
-  overflow: hidden;
   background: #2c3e50; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -15,6 +17,9 @@
     #3498db,
     #2c3e50
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.wrapper {
+  overflow: hidden;
 }
 .degree-section {
   margin: 10px;
@@ -52,13 +57,44 @@
   font-size: 1rem;
 }
 .location {
-  margin: 5rem;
+  margin: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
+.footer-description {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+.forecast-row {
+  display: flex;
+}
+.forecast-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.forecast-day {
+  outline: 1px solid white;
+  margin: 2rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.day {
+  font-size: 2rem;
+}
+.forecast-icon {
+  font-size: 1.5rem;
+}
+.forecast-temperature {
+  font-size: 3rem;
+}
 @media only screen and (min-width: 395px) {
   .location {
     flex-direction: row;
@@ -68,6 +104,10 @@
   }
   .search-box {
     width: 350px;
+  }
+  .forecast-container {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -87,3 +127,4 @@
     font-size: 4.5rem;
   }
 }
+
