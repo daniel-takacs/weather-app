@@ -6,30 +6,50 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+    crossorigin="anonymous"
+  />
     <title>Weather app</title>
   </head>
   <body>
-    <section class="wrapper">
+    <div class="container-fluid wrapper d-flex align-items-center justify-content-center">
+      <div class="card-rounded my-3 card-css">
+        <form class="form-city m-3 d-flex justify-content-center">
       <input
         type="text"
         autocomplete="off"
-        class="search-box js-search-box"
+        class="search-box js-search-box p-4 form-rounded shadow-lg"
         placeholder="Search for a city..."
       />
-      <div class="location">
+    </form>
+      <div class="location text-center d-flex align-items-center">
         <h1 class="location-city js-location-city">Location</h1>
         <div class="weather-icon js-weather-icon">
           <img src="./icons/unknown.png" alt="weather icon" />
         </div>
       </div>
-      <div class="temperature">
+      <div class="temperature text-center">
         <div class="degree-section js-degree-section">
-          <h2 class="temperature-degree js-temperature-degree">-</h2>
+          <div class="temperature-degree js-temperature-degree">-</div>
           <span>°</span> <span>C</span>
         </div>
         <div class="temperature-description js-temperature-description">-</div>
       </div>
-    </section>
+    </div>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+  crossorigin="anonymous"
+></script>
     <script src="bundle.js"></script>
   </body>
 </html>
