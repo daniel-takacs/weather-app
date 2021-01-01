@@ -97,7 +97,18 @@ body {
 .forecast-temperature {
   font-size: 3rem;
 }
-
+.wind-section {
+  display: flex;
+}
+.wind {
+  margin: 0 0.5rem;
+}
+.humidity-section {
+  display: flex;
+}
+.humidity {
+  margin: 0 0.5rem;
+}
 
 @media only screen and (min-width: 395px) {
   .location {
