@@ -2,6 +2,7 @@ import '../styles/styles.css';
 import '../index.html';
 
 const apiKey = "886705b4c1182eb1c69f28eb8c520e20";
+const wDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 window.addEventListener("load", () => {
   let lon;
@@ -86,82 +87,27 @@ window.addEventListener("load", () => {
       return response.json();
     })
     .then(data => {
-      //let resultsHTML = "";
-      
-      
-      //document.querySelector(".js-forecast-temperature").innerHTML = dailyTemperature;
-      //document.querySelector(".forecast-icon").innerHTML = dailyIcon;
-      
+    
+     
       for(let i=0; i<4; i++ ){
-        
+     
         let dailyIcon = data.daily[i].weather[0].icon;
         
         let dailyTemperature = Math.floor(data.daily[i].temp.day);
-        
+        let dailyDescription = data.daily[i].weather[0].description;
         let newElement = document.createElement('div');
 
-       
-
-       // document.querySelector(".forecast-container").innerHTML = 
        newElement.innerHTML = `
         <div class="forecast-day">
-          <div class="day">Monday</div>
+          <div class="day">Day</div>
               <div class="forecast-icon"><img src="./icons/${dailyIcon}.png"></div>
               <div class="forecast-temperature js-forecast-temperature">${dailyTemperature}</div>
-              <div class="forecast-description">Clear</div>
+              <div class="forecast-description">${dailyDescription}</div>
             </div>
         `;
         document.querySelector(".forecast-container").appendChild(newElement);
       }
     })
-      
-      
-      
-      
-      //console.log(data)
-      
-      /*for (let i=0; i<5; i++){
-        
-        
-
-       
-        let forecast = `
-        
-        <div class="forecast-day">
-        <div class="day">Monday</div>
-            <div class="forecast-icon">icon</div>
-            <div class="forecast-temperature js-forecast-temperature">${day}</div>
-            <div class="forecast-description">Clear</div>
-          </div>
-          <div class="forecast-day">
-            <div class="day">Monday</div>
-            <div class="forecast-icon">icon</div>
-            <div class="forecast-temperature js-forecast-temperature">22</div>
-            <div class="forecast-description">Clear</div>
-          </div>
-          <div class="forecast-day">
-            <div class="day">Monday</div>
-            <div class="forecast-icon">icon</div>
-            <div class="forecast-temperature js-forecast-temperature">22</div>
-            <div class="forecast-description">Clear</div>
-          </div>
-          <div class="forecast-day">
-            <div class="day">Monday</div>
-            <div class="forecast-icon">icon</div>
-            <div class="forecast-temperature js-forecast-temperature">22</div>
-            <div class="forecast-description">Clear</div>
-          </div>`;
-          const { day } = data.daily[i].temp;
-        forecastTemperature.textContent = Math.floor(day);
-        const { icon } = data.daily[i].weather[0];
-        forecastIcon.innerHTML = `<img src="./icons/${icon}.png">`;
-        console.log(data);
-
-          document.getElementById("forecast-container").innerHTML = forecast;
-      //const { day } = data.daily[1].temp;
-      //forecastTemperature2.textContent = Math.floor(day2);
-      }*/
-    
     .catch(errorhandle);
   }
 
