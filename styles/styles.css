@@ -4,8 +4,7 @@
 
 }
 body {
-  min-height: 100vh;
-  overflow: hidden;
+  height: 100vh;
   font-family: "PT Sans Caption", sans-serif;
   color: white;
   background: #2c3e50; /* fallback for old browsers */
