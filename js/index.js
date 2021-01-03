@@ -88,9 +88,12 @@ window.addEventListener("load", () => {
     })
     .then(data => {
     
-     
-      for(let i=0; i<4; i++ ){
-     
+     console.log(data);
+      for(let i=1; i<5; i++){
+        let date = new Date(data.daily[i].dt * 1000);
+        let days = ['Sunday', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'];
+        let name = days[date.getDay()];
+
         let dailyIcon = data.daily[i].weather[0].icon;
         
         let dailyTemperature = Math.floor(data.daily[i].temp.day);
@@ -99,7 +102,7 @@ window.addEventListener("load", () => {
 
        newElement.innerHTML = `
         <div class="forecast-day">
-          <div class="day">Day</div>
+          <div class="day">${name}</div>
               <div class="forecast-icon"><img src="./icons/${dailyIcon}.png"></div>
               <div class="forecast-temperature js-forecast-temperature">${dailyTemperature}</div>
               <div class="forecast-description">${dailyDescription}</div>
