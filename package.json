@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/daniel-takacs/weather-app/issues"
   },
-  "homepage": "https://github.com/daniel-takacs/weather-app",
+  "homepage": "https://daniel-takacs.github.io/weather-app/",
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.1",
