@@ -19,8 +19,8 @@ window.addEventListener("load", () => {
   const currentDataByLocation = (data) => {
     const { temp } = data.main;
     temperatureDegree.textContent = Math.round(temp);
-    const { main } = data.weather[0];
-    temperatureDescription.textContent = main;
+    const { description } = data.weather[0];
+    temperatureDescription.textContent = description;
     locationCity.innerText = `${data.name} ${data.sys.country}`;
     const { icon } = data.weather[0];
     locationIcon.innerHTML = `<img src="./icons/${icon}.png">`;
