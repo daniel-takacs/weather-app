@@ -150,12 +150,14 @@ const dataForecastByCity = (data) => {
           <div class="forecast-description">${dailyDescription}</div>
         </div>
     `;
+    
     document.querySelector(".forecast-container").appendChild(newElement);
     
 }
 }
 
   function getForecastByCityId(query) {
+    document.querySelector(".forecast-container").innerHTML = '';
     fetch(
      `https://api.openweathermap.org/data/2.5/forecast/daily?q=${query}&cnt=7&appid=${apiKey}`
     )
