@@ -159,7 +159,7 @@ const dataForecastByCity = (data) => {
   function getForecastByCityId(query) {
     document.querySelector(".forecast-container").innerHTML = '';
     fetch(
-     `https://api.openweathermap.org/data/2.5/forecast/daily?q=${query}&cnt=7&appid=${apiKey}`
+     `https://api.openweathermap.org/data/2.5/forecast/daily?q=${query}&units=metric&cnt=7&appid=${apiKey}`
     )
       .then(json)
       .then(dataForecastByCity)
