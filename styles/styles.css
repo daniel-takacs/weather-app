@@ -1,31 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap");
 *{
-  font-size: 15px;
+  font-size: 13px;
 
 }
 body {
   height: 100vh;
   font-family: "PT Sans Caption", sans-serif;
   color: white;
-  background: #2c3e50; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
+  
+  background-color: #3AAFA9;
+   /* background: rgba(57,204,204,1);
+    background: -webkit-linear-gradient(top, rgba(57,204,204,1) 0%, rgba(34,122,122,1) 100%);
+    background: linear-gradient(to bottom, rgba(57,204,204,1) 0%, rgba(34,122,122,1) 100%);
+  
+ /* background: -webkit-linear-gradient(
     to right,
     #3498db,
     #2c3e50
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to right,
     #3498db,
     #2c3e50
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  );*/
 }
-
 .degree-section {
   
   text-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.form-city {
+  margin-bottom: 5rem;
 }
 .search-box {
   text-align: center;
@@ -61,6 +68,9 @@ body {
   align-items: center;
   justify-content: center;
 }
+.location-city {
+  text-transform: uppercase;
+}
 .footer-description {
   display: flex;
   justify-content: space-evenly;
@@ -79,8 +89,8 @@ body {
 .forecast-day {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   border-radius: 25px;
-  margin: 3rem;
-  padding: 3rem;
+  margin: 1rem;
+  padding: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,9 +122,7 @@ body {
 }
 
 @media only screen and (min-width: 395px) {
-  .location {
-    flex-direction: row;
-  }
+  
   .location-city {
     margin-right: 2rem;
   }
@@ -127,9 +135,15 @@ body {
   }
 }
 
-
-
 @media only screen and (min-width: 768px) {
+  .forecast-day {
+    
+    margin: 1rem;
+    padding: 2rem;
+  }
+  .location {
+    flex-direction: row;
+  }
   .location-city {
     font-size: 3rem;
   }
