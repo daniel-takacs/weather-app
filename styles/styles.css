@@ -7,25 +7,9 @@ body {
   height: 100vh;
   font-family: "PT Sans Caption", sans-serif;
   color: white;
-  
-  background-color: #3AAFA9;
-   /* background: rgba(57,204,204,1);
-    background: -webkit-linear-gradient(top, rgba(57,204,204,1) 0%, rgba(34,122,122,1) 100%);
-    background: linear-gradient(to bottom, rgba(57,204,204,1) 0%, rgba(34,122,122,1) 100%);
-  
- /* background: -webkit-linear-gradient(
-    to right,
-    #3498db,
-    #2c3e50
-  ); 
-  background: linear-gradient(
-    to right,
-    #3498db,
-    #2c3e50
-  );*/
+  background-image: linear-gradient( 1.3deg,  rgba(91,117,163,1) 11.4%, rgba(68,98,128,1) 77% );
 }
 .degree-section {
-  
   text-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
